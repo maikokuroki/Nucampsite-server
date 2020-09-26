@@ -8,7 +8,7 @@ const userSchema = new Schema({
         default: ''
     },
     lastname: {
-    type: String,
+        type: String,
         default: ''
     },
     admin: {
@@ -16,8 +16,5 @@ const userSchema = new Schema({
         default: false
     }
 });
-
 userSchema.plugin(passportLocalMongoose);
-
-
 module.exports = mongoose.model('User', userSchema);
