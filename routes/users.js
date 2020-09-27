@@ -34,7 +34,7 @@ router.post('/signup', (req, res) => {
                 }
                 user.save(err => {
                     if (err) {
-                        res.status = 500;
+                        res.statusCode = 500;
                         res.setHeader('Content-Type', 'application/json');
                         res.json({err: err});
                         return;
